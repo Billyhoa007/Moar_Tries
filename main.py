@@ -34,9 +34,9 @@ if __name__ == "__main__":
       
       # Trying to iteratively create new objects with each pass through the loop
       i = 0
-      object0 = record(ip, logTime, dayofweek) # attempting to pass these values into the object
+      object[i] = record(ip, logTime, dayofweek) # attempting to pass these values into the object
       i += 1
-      print object0.ip
+      print object[i].ip
 
       showArray[i] = object[i] # store object in array
       
