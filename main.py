@@ -1,10 +1,10 @@
 #!/usr/bin/python
 
-import string # Check if this module is needed / being used
-# import sys
-import time # Check if this module is needed / being used
-import datetime
-from time import strptime
+import string
+import sys
+import time 
+#import datetime
+#from time import strptime
 import functions
 # import libraries
 
@@ -23,18 +23,22 @@ if __name__ == "__main__":
     # My goal for this loop is to create a new object for each record
     for log in logdata:
       s = log.split()
+      
+      # returns object data
       ip = s[0]
       logDateTime = s[3]
       logTime = functions.whichHour(logDateTime)
       year, month, day = functions.exactDay(logDateTime)
       dayofweek = functions.dateToInt(year, month, day)
       
+      # Trying to iteratively create new objects with each pass through the loop
       i = 0
       object[i] = record([ip, logTime, dayofweek]) # attempting to pass these values into the object
       i += 1
+      object0.PrintRecord()
+
       showArray[i] = object[i] # store object in array
-    
-    print showArray[0]
+      
 
   # Process the information, instantiate a new object, put in array, compare and then output to console / wherever.
    

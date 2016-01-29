@@ -3,6 +3,7 @@ class show:
         self.name = name
         self.begintTime = beginTime
         self.endTime = endTime
+        self.dayofweek = dayofweek
         self.counter = counter
 
 class record:

@@ -1,3 +1,6 @@
+from time import strptime
+import datetime
+
 ################################################
 # This function returns a log date as an integer
 ################################################
@@ -16,14 +19,14 @@ def whichHour(logDateTime):
 # Return year month and day values
 ##################################
 def exactDay(logDateTime):
-    yearstr = logDateTime[8:12]
+    yearStr = logDateTime[8:12]
     monthStr = logDateTime[4:7]
-    daystr = logDateTime[1:3]
+    dayStr = logDateTime[1:3]
     monthnum = strptime(monthStr,'%b').tm_mon
-    year = int(yearstr)
+    year = int(yearStr)
     month = int(monthnum)
-    day = int(daystr)
-    return year, month, day # return list with these values? or just return them?
+    day = int(dayStr)
+    return year, month, day
 
 #######################################################################################
 # I hard coded the show names and corresponding slots for clarity in their relationship
