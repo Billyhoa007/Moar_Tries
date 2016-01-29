@@ -11,4 +11,8 @@ class record:
         self.logTime, = logTime
         self.dayofweek = dayofweek
 
+    def printRecord(self):
+        for line in self.ip:
+            print line
+
 # I have no idea what I am doing...
