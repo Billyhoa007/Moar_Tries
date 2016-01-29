@@ -1,23 +1,23 @@
 from time import strptime
 import datetime
 
-################################################
-# This function returns a log date as an integer
-################################################
+#############################################################
+# dateToInt: This function returns a log date as an integer #
+#############################################################
 def dateToInt(year, month, day):
     dayofweek = datetime.date(year, month, day).isoweekday()
     return dayofweek
 
-####################################################
-# This function finds the hour the log was generated
-####################################################
+#################################################################
+# whichHour: This function finds the hour the log was generated #
+#################################################################
 def whichHour(logDateTime):
     logTime = logDateTime[13:15] # the hour is within this index range
     return logTime # return the hour of the log generation
 
-##################################
-# Return year month and day values
-##################################
+##############################################
+# exactDay: Return year month and day values #
+##############################################
 def exactDay(logDateTime):
     yearStr = logDateTime[8:12]
     monthStr = logDateTime[4:7]
@@ -28,10 +28,9 @@ def exactDay(logDateTime):
     day = int(dayStr)
     return year, month, day
 
-#######################################################################################
-# I hard coded the show names and corresponding slots for clarity in their relationship
-# An interface or section of code might later be created for faster edits
-#######################################################################################
+####################################################################################################
+# whichShow: I hard coded the show names and corresponding slots for clarity in their relationship #
+####################################################################################################
 
 def whichShow(strlogTime, strdayofweek):
     logTime = int(strlogTime)

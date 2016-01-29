@@ -6,6 +6,7 @@ import time
 #import datetime
 #from time import strptime
 import functions
+import classes
 # import libraries
 
 __author__ = 'Chris'
@@ -33,9 +34,9 @@ if __name__ == "__main__":
       
       # Trying to iteratively create new objects with each pass through the loop
       i = 0
-      object[i] = record([ip, logTime, dayofweek]) # attempting to pass these values into the object
+      object0 = record(ip, logTime, dayofweek) # attempting to pass these values into the object
       i += 1
-      object0.PrintRecord()
+      print object0.ip
 
       showArray[i] = object[i] # store object in array
       
