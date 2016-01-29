@@ -1,8 +1,7 @@
 #!/usr/bin/python
 
-# import json
 import string # Check if this module is needed / being used
-import sys
+# import sys
 import time # Check if this module is needed / being used
 import datetime
 from time import strptime
@@ -21,7 +20,7 @@ if __name__ == "__main__":
     showArray = []
     logdata = sys.stdin.readlines()
 
-    # My goal for this loop is to keep a count of each show in log
+    # My goal for this loop is to create a new object for each record
     for log in logdata:
       s = log.split()
       ip = s[0]
@@ -29,13 +28,13 @@ if __name__ == "__main__":
       logTime = functions.whichHour(logDateTime)
       year, month, day = functions.exactDay(logDateTime)
       dayofweek = functions.dateToInt(year, month, day)
-#     functions.whichShow(logTime, dayofweek)
+      
       i = 0
-      object[i] = record([ip, logTime, dayofweek])
+      object[i] = record([ip, logTime, dayofweek]) # attempting to pass these values into the object
       i += 1
-      showArray[i] = object[i]
+      showArray[i] = object[i] # store object in array
+    
     print showArray[0]
-    #    outputToConsole()
 
   # Process the information, instantiate a new object, put in array, compare and then output to console / wherever.
    
