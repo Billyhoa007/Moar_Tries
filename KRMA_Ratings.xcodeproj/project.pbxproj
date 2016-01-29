@@ -7,18 +7,26 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		835D5C971C5A961A00F0EF73 /* access.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = access.py; sourceTree = "<group>"; };
-		835D5C981C5AB2EF00F0EF73 /* shows.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = shows.py; sourceTree = "<group>"; };
-		835D5C991C5AC77700F0EF73 /* records.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = records.py; sourceTree = "<group>"; };
+		835D5C971C5A961A00F0EF73 /* main.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = main.py; sourceTree = "<group>"; };
+		835D5C981C5AB2EF00F0EF73 /* libraries.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = libraries.py; sourceTree = "<group>"; };
+		835D5C991C5AC77700F0EF73 /* functions.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = functions.py; sourceTree = "<group>"; };
+		835D5C9A1C5ACFF200F0EF73 /* createdb.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = createdb.py; sourceTree = "<group>"; };
+		835D5C9B1C5AD03100F0EF73 /* insertRecords.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = insertRecords.py; sourceTree = "<group>"; };
+		835D5C9C1C5AD0D900F0EF73 /* test.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = test.py; sourceTree = "<group>"; };
+		835D5C9D1C5BCF1B00F0EF73 /* classes.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = classes.py; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
 		835D5C901C5A95BA00F0EF73 = {
 			isa = PBXGroup;
 			children = (
-				835D5C991C5AC77700F0EF73 /* records.py */,
-				835D5C971C5A961A00F0EF73 /* access.py */,
-				835D5C981C5AB2EF00F0EF73 /* shows.py */,
+				835D5C9D1C5BCF1B00F0EF73 /* classes.py */,
+				835D5C9C1C5AD0D900F0EF73 /* test.py */,
+				835D5C9B1C5AD03100F0EF73 /* insertRecords.py */,
+				835D5C9A1C5ACFF200F0EF73 /* createdb.py */,
+				835D5C991C5AC77700F0EF73 /* functions.py */,
+				835D5C971C5A961A00F0EF73 /* main.py */,
+				835D5C981C5AB2EF00F0EF73 /* libraries.py */,
 			);
 			sourceTree = "<group>";
 		};

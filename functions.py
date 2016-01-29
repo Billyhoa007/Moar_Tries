@@ -1,58 +1,29 @@
-shows = [
-         "the Shannon Steele Show",
-         "the Herd-Will Geoff Show",
-         "the Vinnie's Midday Show",
-         "the Aleister and Maggie Show",
-         "the Steve Jones Show",
-         "the Eye on the Target Radio Show",
-         "the Handy Randy Show",
-         "the Brian 'Moonshine' Varner Show",
-         "the Best Stams Sports Show",
-         "the TJ Dylan Show",
-         "Some Kind of Radio Show",
-         "the Frenemies News Radio Show",
-         "the Zal & Zera Game Forum",
-         "the Undaground Wrestling Show",
-         "the Altered Realm Show",
-         "the Bob Fritz Show",
-         "the Sports to the Max Show",
-         "Laura Lyn's Psychic Power Show",
-         "an undesignated time slot"
-         ]
+################################################
+# This function returns a log date as an integer
+################################################
+def dateToInt(year, month, day):
+    dayofweek = datetime.date(year, month, day).isoweekday()
+        return dayofweek
 
-# For a CGI interface, you will have to store the values in a database / pull these values from DB
-# CREATE TABLE SHOWS;
+####################################################
+# This function finds the hour the log was generated
+####################################################
+def whichHour(logDateTime):
+    logTime = logDateTime[13:15] # the hour is within this index range
+    return logTime # return the hour of the log generation
 
-# Show name, begin time, end time, day (numerical or convert: monday = 1, tuesday = 2)
-
-# It will search the database for dpulicate entires / new show times and update (how? dunno the comparison SQL)
-
-slots = {
-    slot1: [beginTime, endTime]
-}
-
-
-showCounters = { # programatically create these? Yes?
-    'counter0' : 0,
-    'counter1' : 0,
-    'counter2' : 0,
-    'counter3' : 0,
-    'counter4' : 0,
-    'counter5' : 0,
-    'counter6' : 0,
-    'counter7' : 0,
-    'counter8' : 0,
-    'counter9' : 0,
-    'counter10' : 0,
-    'counter11' : 0,
-    'counter12' : 0,
-    'counter13' : 0,
-    'counter14' : 0,
-    'counter15' : 0,
-    'counter16' : 0,
-    'counter17' : 0,
-    'counter18' : 0
-}
+##################################
+# Return year month and day values
+##################################
+def exactDay(logDateTime):
+    yearstr = logDateTime[8:12]
+    monthStr = logDateTime[4:7]
+    daystr = logDateTime[1:3]
+    monthnum = strptime(monthStr,'%b').tm_mon
+    year = int(yearstr)
+    month = int(monthnum)
+    day = int(daystr)
+    return year, month, day # return list with these values? or just return them?
 
 #######################################################################################
 # I hard coded the show names and corresponding slots for clarity in their relationship
@@ -61,8 +32,8 @@ showCounters = { # programatically create these? Yes?
 
 def whichShow(strlogTime, strdayofweek):
     logTime = int(strlogTime)
-        dayofweek = int(strdayofweek)
-            if logTime in range(6,9) and dayofweek in range(1,5):
+    dayofweek = int(strdayofweek)
+    if logTime in range(6,9) and dayofweek in range(1,5):
 #   print "This is the Shannon Steele Show" # Will pass in function
 showCounters['counter0'] += 1
     elif(logTime in range(9,12) and dayofweek in range(1,5)):
