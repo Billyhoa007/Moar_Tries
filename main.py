@@ -2,12 +2,10 @@
 
 import string
 import sys
-import time 
-#import datetime
-#from time import strptime
+import time
 import functions
-import classes
-# import libraries
+from classes import record
+import libraries
 
 __author__ = 'Chris'
 
@@ -34,9 +32,9 @@ if __name__ == "__main__":
       
       # Trying to iteratively create new objects with each pass through the loop
       i = 0
-      object[i] = record(ip, logTime, dayofweek) # attempting to pass these values into the object
+      object0 = classes.record(ip, logTime, dayofweek) # attempting to pass these values into the object
       i += 1
-      print object[i].ip
+      print object0.ip
 
       showArray[i] = object[i] # store object in array
       

@@ -26,11 +26,11 @@ shows = [
 # Show name, begin time, end time, day (numerical or convert: monday = 1, tuesday = 2)
 
 # It will search the database for dpulicate entires / new show times and update (how? dunno the comparison SQL)
-
+'''
 slots = {
     slot1: [beginTime, endTime]
 }
-
+'''
 
 showCounters = { # programatically create these? Yes?
     'counter0' : 0,
