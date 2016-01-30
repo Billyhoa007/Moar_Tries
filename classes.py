@@ -6,11 +6,13 @@ class show:
         self.dayofweek = dayofweek
         self.counter = counter
 
+
 class record:
     def __init__(self, ip, logTime, dayofweek):
         self.ip = ip
-        self.logTime, = logTime
+        self.logTime = logTime
         self.dayofweek = dayofweek
+        print "The object has been instantiated"
 
     def printRecord(self):
         for line in self.ip:
