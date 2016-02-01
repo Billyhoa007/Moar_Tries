@@ -16,7 +16,7 @@ __author__ = 'Chris'
 ################
 if __name__ == "__main__":
 
-#  try:
+  try:
     i = 0
     showArray = []
     logdata = sys.stdin.readlines()
@@ -33,13 +33,16 @@ if __name__ == "__main__":
       dayofweek = functions.dateToInt(year, month, day)
 
       # Trying to iteratively create new objects with each pass through the loop
-      object0 = classes.record(ip, logTime, dayofweek) # attempting to pass these values into the object
-      print object0.ip
-      showArray.append(object0) # store object in array
+      object = classes.record(ip, logTime, dayofweek) # attempting to pass these values into the object
+      #print object.ip
+      showArray.append(object) # store object in array
       i += 1
-      
+
+  # I have no idea how to use the objects once they're in the array...
+  print showArray[0]
+
 
   # Process the information, instantiate a new object, put in array, compare and then output to console / wherever.
    
-   #  except:
+  except:
 

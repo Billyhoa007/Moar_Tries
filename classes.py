@@ -12,10 +12,6 @@ class record:
         self.ip = ip
         self.logTime = logTime
         self.dayofweek = dayofweek
-        print "The object has been instantiated"
 
-    def printRecord(self):
-        for line in self.ip:
-            print line
 
 # I have no idea what I am doing...
